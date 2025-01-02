@@ -12,7 +12,7 @@ import { UserModule } from './user/user.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://pluemmmmmmmmmm:084map340@cluster0.0p57u4f.mongodb.net/booking?retryWrites=true&w=majority',
+      `mongodb+srv://${process.env.USERNAME}:${process.env.PASS}@cluster0.0p57u4f.mongodb.net/booking?retryWrites=true&w=majority`,
     ),
     UserDataModule,
     MeetingRoomBookingModule,
